@@ -1,0 +1,18 @@
+services:
+  quilc:
+    image: rigetti/quilc
+    ports:
+      - "5555:5555"
+    stdin: open
+    tty: true
+    command: ["-P", "-S"]
+    remove: on_shutdown
+
+  qvm:
+    image: rigetti/qvm
+    ports:
+      - "5000:5000"
+    stdin: open
+    tty: true
+    command: ["-S"]
+    remove: on_shutdown
