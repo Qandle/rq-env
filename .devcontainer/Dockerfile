@@ -9,5 +9,5 @@ RUN if [ -f "/tmp/conda-tmp/environment.yml" ]; then umask 0002 && /opt/conda/bi
 # Install any remaining packages via pip
 RUN pip install pyquil
 
-RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
-    && apt-get -y install --no-install-recommends liblapack-dev libblas-dev libffi-dev libzmq3-dev sbcl
+RUN apt update && apt-get update && export DEBIAN_FRONTEND=noninteractive \
+    && apt-get -y install --no-install-recommends liblapack-dev libblas-dev libffi-dev libzmq3-dev libarchive-dev sbcl
