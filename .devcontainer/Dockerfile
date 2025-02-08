@@ -11,6 +11,3 @@ RUN pip install pyquil
 
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     && apt-get -y install --no-install-recommends liblapack-dev libblas-dev libffi-dev libzmq3-dev sbcl
-
-# Install forest
-RUN bash forest-sdk-2.23.0-linux-deb/forest-sdk-2.23.0-linux-deb.run*
